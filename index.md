@@ -1,8 +1,1 @@
----
-layout: default
-title: Home
----
-
-# Welcome to My Simple Image Page
-
-![My Image]({{ site.baseurl }}assets/images/commingSoon.png)
+![commingSoon](https://github.com/user-attachments/assets/ae62db5c-8223-4cb3-8569-ebc1bcc5fa40)
