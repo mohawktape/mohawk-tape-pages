@@ -1,1 +1,4 @@
-theme: minima
+title: My Simple Image Display
+description: A simple Jekyll site to display a single image
+baseurl: "" # The base URL of your site (leave empty for GitHub Pages)
+url: "https://francoispickleball.github.io/mohawk-tape-pages/" # Replace with your actual GitHub Pages URL
