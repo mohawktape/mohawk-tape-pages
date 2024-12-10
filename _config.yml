@@ -1,4 +1,2 @@
-
-description: A simple Jekyll site to display a single image
-baseurl: "" # The base URL of your site (leave empty for GitHub Pages)
-url: "https://francoispickleball.github.io/mohawk-tape-pages/" # Replace with your actual GitHub Pages URL
+title: Simple Jekyll Site
+description: A black background with a responsive image
