@@ -4,182 +4,49 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Buy MohawkTape</title>
-  <link rel="stylesheet" href="assets/styles.css">
-  <style>
-    body {
-      font-family: 'Helvetica Neue', Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-      height: 100vh;
-      overflow-y: auto;
-      color: white;
-      background: black;
-    }
-    .nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 0.5rem 1rem;
-      background: rgba(0, 0, 0, 0.9);
-      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
-      z-index: 10;
-    }
-    .logo {
-      width: 100px;
-      height: 100px;
-      margin-left: 2cm;
-      background: url('assets/images/stamp_300dpi.png') no-repeat center center/contain;
-      filter: invert(1);
-    }
-    .logo a {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-    .nav a {
-      color: white;
-      text-decoration: none;
-      text-transform: uppercase;
-      font-weight: bold;
-      font-size: 0.9rem;
-      transition: color 0.3s ease;
-      margin-right: 0.5cm;
-    }
-    .nav a:hover {
-      color: #ffd700;
-    }
-    .container {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
-      text-align: center;
-      padding: 2rem;
-      box-sizing: border-box;
-      position: relative;
-      flex-direction: row;
-    }
-    .left-panel {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      margin: 0 2rem;
-    }
-    .right-panel {
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-      justify-content: flex-start;
-      margin: 0 2rem;
-    }
-    .product-image {
-      width: 345px;
-      height: 650px;
-      /*background-size: cover;*/
-      background-repeat: no-repeat;
-      background-position: center;
-      margin-right: 2rem;
-      margin-left: 0rem;
-      border:  2px solid white;
-      box-shadow: 0 50px 50px rgba(1, 1, 1, 1);
-      margin-top: 1%;
-    }
-    .description {
-      font-size: 1.2rem;
-      max-width: 300px;
-      text-align: left;
-    }
-    .description h2 {
-      font-size: 2rem;
-      margin-bottom: 0.5rem;
-      
-    }
-    .btn {
-      padding: 1rem 2rem;
-      font-size: 1rem;
-      color: black;
-      background: #ffd700;
-      border: none;
-      border-radius: 5px;
-      cursor: pointer;
-      text-transform: uppercase;
-      font-weight: bold;
-      transition: background 0.3s ease, color 0.3s ease;
-      margin-top: 1rem;
-    }
-    .btn:hover {
-      background: white;
-      color: black;
-    }
-    .image-selector {
-      margin-top: 1rem;
-      display: flex;
-      flex-direction: column;
-      align-items: flex-start;
-    }
-    .image-selector img {
-      width: 50px;
-      height: 100px;
-      margin: 0.2rem 10px;
-      cursor: pointer;
-      border: 1px solid black;
-    }
-    .image-selector img:hover {
-      border-color: #ffd700;
-    }
-    .background {
-      position: absolute;
-      top: 0%;
-      left: 50%;
-      transform: translateX(-50%);
-      width: 1242px;
-      height: 1440px;
-      background: url('assets/images/background.png') no-repeat center top;
-      background-size: contain;
-      filter: brightness(100%);
-      z-index: -1;
-    }
-  </style>
+  <link rel="stylesheet" href="assets/main.css">
+  <link rel="stylesheet" href="assets/nav.css">
+  <link rel="stylesheet" href="assets/button.css">
+  <link rel="stylesheet" href="assets/image-selector.css">
+  <link rel="stylesheet" href="assets/header.css">
+
 </head>
 <body>
-<div class="nav">
-  <div class="logo"><a href="index.html"></a></div>
-  <div class="menu">
-    <a href="index.html">Home</a>
-    <a href="product.html">Products</a>
-    <a href="index.html">About</a>
-    <a href="contact.html">Contact</a>
-  </div>
-</div>
+<!-- Navigation Bar -->
+<div id="nav-container"></div>
+<script>
+  fetch('nav.html')
+          .then(response => response.text())
+          .then(data => document.getElementById('nav-container').innerHTML = data);
+</script>
+
+<!-- Main Content -->
 <div class="container">
+  <h1>Give your game the Mohawk edge</h1>
   <div class="background"></div>
-  <div class="left-panel">
-    <div class="image-selector">
-      <img src="assets/images/product1.png" alt="Main Product Image" onclick="changeImage('assets/images/product1.png')">
-      <img src="assets/images/product2.png" alt="Second Product Image" onclick="changeImage('assets/images/product2.png')">
-      <img src="assets/images/product3.png" alt="Third Product Image" onclick="changeImage('assets/images/product3.png')">
-      <img src="assets/images/product4.png" alt="Fourth Product Image" onclick="changeImage('assets/images/product4.png')">
-    </div>
-    <button class="btn" onclick="buyNow()">Buy Soon</button>
+  <div class="center-panel">
+    <div class="product-image" style="background-image: url('assets/images/product1.png');"></div>
   </div>
   <div class="right-panel">
-    <div class="product-image" style="background-image: url('assets/images/product1.png');"></div>
     <div class="description">
-      <h2>Coming Soon</h2>
-      <p>Coming Soon.</p>
-      <ul>
-        <li>Coming Soon</li>
-        <li>Coming Soon</li>
-        <li>Coming Soon</li>
-        <li>Coming Soon</li>
-      </ul>
+      <h2>MohawkTape Adjustable System</h2>
+      <p>Experience the best in balance technology with our innovative MohawkTape Adjustable System. Fine-tune your game with precision.</p>
+      <div class="left-panel">
+        <div class="image-selector">
+          <img src="assets/images/product1.png" alt="Product Image 1" onclick="changeImage('assets/images/product1.png')">
+          <img src="assets/images/product2.png" alt="Product Image 2" onclick="changeImage('assets/images/product2.png')">
+          <img src="assets/images/product3.png" alt="Product Image 3" onclick="changeImage('assets/images/product3.png')">
+          <img src="assets/images/product4.png" alt="Product Image 4" onclick="changeImage('assets/images/product4.png')">
+        </div>
+        <button class="btn" onclick="buyNow()">Shop Soon</button>
+      </div>
+
     </div>
+    
   </div>
 </div>
+
+
 <script>
   function changeImage(image) {
     document.querySelector('.product-image').style.backgroundImage = `url('${image}')`;
