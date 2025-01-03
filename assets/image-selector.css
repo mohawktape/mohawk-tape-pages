@@ -17,8 +17,8 @@
     display: flex; /* Use flexbox layout */
     justify-content: flex-start; /* Center items horizontally */
     align-items: flex-start; /* Center items vertically */
-    min-height: 40vh;
-    min-width: 100vh; /* Make sure the container takes at least the full height of the viewport */
+    min-height: 40em;
+    min-width: 100em; /* Make sure the container takes at least the full height of the viewport */
     padding: 6em 3em; /* Add padding inside the container */
     box-sizing: border-box; /* Include padding in element's total width/height */
     gap: 1em; /* Space between items */
