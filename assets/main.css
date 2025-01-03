@@ -19,7 +19,7 @@ body {
     transform: translateX(-50%);
     width: 1242px;
     height: 1440px;
-    background: url('/assets/images/background.png') no-repeat center top;
+    background: url('../assets/images/background.png') no-repeat center top;
     background-size: contain;
     filter: brightness(100%);
     z-index: -1;
