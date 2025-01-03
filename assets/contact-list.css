@@ -3,7 +3,7 @@
     list-style: none;
     padding: 0;
     text-align: center;
-    margin-top: 0rem; /* Reduce the space between the heading and the list */
+    margin-top: 8rem; /* Reduce the space between the heading and the list */
     margin-bottom: 2rem; /* Add some space after the list */
 }
 
