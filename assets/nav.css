@@ -3,7 +3,7 @@
     width: 7em;
     height: 7em;
     margin-left: 1em;
-    background: url('/assets/images/stamp_300dpi.png') no-repeat center center/contain;
+    background: url('../assets/images/stamp_300dpi.png') no-repeat center center/contain;
     filter: invert(1);
     cursor: pointer; /* Makes the logo look like a clickable element */
 }
