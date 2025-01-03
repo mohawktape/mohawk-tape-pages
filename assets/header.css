@@ -22,6 +22,15 @@ h1 {
     margin: 7.5rem 0 0.5em 0; /* Adjusted margin to move h1 closer to the top */
     text-align: center;
 }
+h2 {
+    font-size: clamp(4rem, 5vw, 4rem);
+    text-transform: uppercase;
+    margin: 7.5rem 0 0.5em 0; /* Adjusted margin to move h1 closer to the top */
+    text-align: center;
+    color: gold;
+}
+
+
 
 p {
     font-size: 1.4rem;
