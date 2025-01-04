@@ -12,9 +12,11 @@
     margin-bottom: 1rem;
     background-color: rgba(255, 215, 0, 1); /* Light red background */
     padding: 0.5rem;
-    border-radius: 4em;
+    border-radius: 2em;
     color: #fff;
-    width: 15em; /* Adjust the width to fit the content */
+    max-width:15em;
+    min-width:13em;
+    /*width: min-content ; /* Adjust the width to fit the content */
     margin-left: auto; /* Center it horizontally */
     margin-right: auto; /* Center it horizontally */
 }
