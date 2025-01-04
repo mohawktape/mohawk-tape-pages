@@ -18,7 +18,7 @@
     /*width: min-content ; !* Adjust the width to fit the content *!*/
     margin-left: auto; /* Center it horizontally */
     margin-right: auto; /* Center it horizontally */
-    width: 30ch;
+    width: 35ch;
 }
 
 .contact-list li a {

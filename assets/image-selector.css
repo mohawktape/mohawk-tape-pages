@@ -47,7 +47,8 @@
     display: flex; /* Use flexbox layout */
     flex-direction: column; /* Arrange content vertically */
     justify-content: center; /* Center content vertically */
-    max-width: 35em; /* Limit the maximum width of the panel */
+    max-width: 25em; /* Limit the maximum width of the panel */
+    min-width: 17em; /* Limit the maximum width of the panel */
     padding: 2em; /* Add padding inside the panel */
     border-radius: 1em; /* Round the corners of the panel */
     background: rgba(0, 0, 0, 0.5);
@@ -72,8 +73,8 @@
 
 /* Style for each image inside the image selector */
 .image-selector img {
-    width: 20em; /* Set image width */
-    height: 10em; /* Set image height */
+    width: 18em; /* Set image width */
+    height: 8em; /* Set image height */
     object-fit: cover; /* Ensure the image covers the area without distortion */
     border-radius: 0.5em; /* Round the image corners */
     cursor: pointer; /* Make the image clickable */
