@@ -14,9 +14,8 @@
     padding: 0.5rem;
     border-radius: 2em;
     color: #fff;
-    max-width:15em;
-    min-width:15em;
-    /*width: min-content ; /* Adjust the width to fit the content */
+
+    width: min-content ; /* Adjust the width to fit the content */
     margin-left: auto; /* Center it horizontally */
     margin-right: auto; /* Center it horizontally */
 }
