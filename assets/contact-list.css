@@ -15,9 +15,10 @@
     border-radius: 2em;
     color: #fff;
 
-    width: min-content ; /* Adjust the width to fit the content */
+    /*width: min-content ; !* Adjust the width to fit the content *!*/
     margin-left: auto; /* Center it horizontally */
     margin-right: auto; /* Center it horizontally */
+    width: 30ch;
 }
 
 .contact-list li a {
