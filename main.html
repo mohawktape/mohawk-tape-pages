@@ -1,0 +1,217 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox with Nested Rows</title>
+    <style>
+
+        body {
+            background-color: black;
+        }
+        .background {
+            position: absolute;
+            top: 8em;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 1242px;
+            height: 1440px;
+            background: url('./assets/images/background.png') no-repeat center top;
+            background-size: contain;
+            filter: brightness(100%);
+            z-index: -1;
+        }
+        /* Main container - flexbox, arranged in rows */
+        .main {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            justify-content: space-evenly;
+            align-items: center;
+            width: 100%;
+            background-color: orangered;
+            /*flex-wrap: wrap;*/
+
+        }
+
+        /* Child boxes - each with fixed width and height */
+        .box {
+            flex: 1;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid white;
+        }
+
+        .box-nav {
+            display: flex;            /* Flexbox for horizontal layout */
+            align-items: center;      /* Vertically center content */
+            justify-content: space-between; /* Push logo to left and links to right */
+            background-color: red;    /* Keep the red background */
+            width: 100%;              /* Full width */
+            padding: 0 1rem;          /* Add padding for spacing */
+            min-height: 2rem;
+        }
+  
+        .box-nav a
+        {
+            color: white;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: bold;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
+            padding-right:  1rem;
+
+        }
+
+        .box-foot {
+            background-color: blue;
+            max-height: 4rem;
+            min-height: 2rem
+        }
+
+        /* Box 2 with inner row flexbox */
+        .box2 {
+            display: flex;
+            flex-direction: row;
+            /*background-color: green;*/
+        }
+
+        .inner-box {
+            flex: 1;
+            height: 100%;
+            border: 1px solid white;
+        }
+
+        .inner1 {
+            /*background-color: orange;*/
+        }
+
+        /* Inner2 with nested column boxes */
+        .inner2 {
+            display: flex;
+            flex-direction: column;  /* Create rows inside inner2 */
+            background-color: yellow;
+        }
+
+        .inner3 {
+            background-color: pink;
+        }
+
+        /* Boxes inside inner2 */
+        .nested-row {
+            /*flex: 1;  !* Each row takes equal space *!*/
+            width: 100%;  /* Full width of parent */
+        }
+
+        .row1 {
+            
+            background-color: lightblue;
+        }
+
+        .row2-image-main 
+        {
+            display: flex;               /* Flexbox for alignment */
+            justify-content: center;     /*!* Center horizontally *!*/
+            align-items: center;         /*!* Center vertically *!*/
+            overflow: hidden;            /* Prevent overflow */
+            height: 100%;                /*!* Allow it to grow based on parent height *!*/
+
+        }
+        .row2-image-main  img
+        {
+            max-width: 100%;             /* Ensure image doesn't exceed container width */
+            min-width: 15rem;
+            /*max-height: 100%;            !* Ensure image doesn't exceed container height *!*/
+            object-fit: contain;        /* !* Scale image proportionally to fit without cropping *!*/
+        }
+        
+
+        .row3 {
+            display: flex;            /* Flexbox for horizontal layout */
+            align-items: center;      /* Vertically center content */
+            justify-content: center;
+            gap: .5em;
+            background-color: lightgreen;
+        }
+        .row3 img
+        {
+
+            height: 6em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            margin: .25em;
+        }
+
+        .nav-logo
+        {
+            height:100%;
+            width: 10em;
+            min-width: 10em;
+            margin-left: 1em;
+            background: url('assets/images/stamp_300dpi.png') no-repeat center center/contain;
+            filter: invert(1);
+            cursor: pointer;
+        }
+        .nav-logo-link
+        {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+
+        /* Apply max-height when the viewport height is at least 50vh */
+        @media (min-height: 5vh) {
+            .box-nav {
+                max-height: 4rem; /* Limit height to 6rem */
+            }
+    </style>
+</head>
+<body>
+
+<div class="main">
+    <div class="background"></div>
+    <!-- Box 1 -->
+    <div class="box box-nav">
+        <a href="index.html" class="nav-logo-link">
+            <div class="nav-logo"></div>
+        </a>
+        <div class="box-navr">
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="index.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div> 
+    </div>
+
+    <!-- Box 2 with inner row boxes -->
+    <div class="box box2">
+        <div class="inner-box inner1"></div>
+
+        <!-- Inner2 with 3 vertical rows -->
+        <div class="inner-box inner2">
+            <div class="nested-row row1">d</div>
+            <div class="nested-row row2-image-main">
+                <img id="mainImage" src="assets/images/product1.png" alt="Main Product Image">
+            </div>
+            <div class="nested-row row3">
+                <img src="assets/images/product1.png" alt="Product Image 1" onclick="changeImage('../assets/images/product1.png')">
+                <img src="assets/images/product2.png" alt="Product Image 2" onclick="changeImage('../assets/images/product2.png')">
+                <img src="assets/images/product3.png" alt="Product Image 3" onclick="changeImage('../assets/images/product3.png')">
+                <img src="assets/images/product4.png" alt="Product Image 4" onclick="changeImage('../assets/images/product4.png')">
+                <img src="assets/images/product4.png" alt="Product Image 4" onclick="changeImage('../assets/images/product4.png')">
+            </div>
+        </div>
+
+        <div class="inner-box inner3">d
+        </div>
+    </div>
+
+    <!-- Box 3 -->
+    <div class="box box-foot">d</div>
+</div>
+
+</body>
+</html>
