@@ -28,7 +28,7 @@
             height: 100vh;
             justify-content: space-evenly;
             align-items: center;
-            width: 100%;
+            /*width: 100%;*/
             background-color: orangered;
             /*flex-wrap: wrap;*/
 
@@ -50,8 +50,8 @@
             justify-content: space-between; /* Push logo to left and links to right */
             background-color: red;    /* Keep the red background */
             width: 100%;              /* Full width */
-            padding: 0 1rem;          /* Add padding for spacing */
-            min-height: 2rem;
+            /*padding: 0 1rem;          !* Add padding for spacing *!*/
+            min-height: 4rem;
         }
   
         .box-nav a
@@ -76,7 +76,7 @@
         .box2 {
             display: flex;
             flex-direction: row;
-            /*background-color: green;*/
+            background-color: green;
         }
 
         .inner-box {
@@ -88,7 +88,14 @@
         .inner1 {
             /*background-color: orange;*/
         }
-
+        .inner1 h1
+        {
+            color: white;
+            font-size: clamp(4rem, 5vw, 4rem);
+            text-transform: uppercase;
+            margin: 7.5rem 0 0.5em 0; /* Adjusted margin to move h1 closer to the top */
+            text-align: center;
+        }
         /* Inner2 with nested column boxes */
         .inner2 {
             display: flex;
@@ -189,7 +196,9 @@
 
     <!-- Box 2 with inner row boxes -->
     <div class="box box2">
-        <div class="inner-box inner1"></div>
+        <div class="inner-box inner1">
+            <h1>Give your game the Mohawk edge</h1>
+        </div>
 
         <!-- Inner2 with 3 vertical rows -->
         <div class="inner-box inner2">
