@@ -91,10 +91,19 @@
         .inner1 h1
         {
             color: white;
-            font-size: clamp(4rem, 5vw, 4rem);
+            font-size: 4rem;               /* Default size */
             text-transform: uppercase;
-            margin: 7.5rem 0 0.5em 0; /* Adjusted margin to move h1 closer to the top */
+            margin: 7.5rem 0 0.5em 0;      /* Adjusted margin to move h1 closer to the top */
             text-align: center;
+
+            /* Enable scaling when overflow occurs */
+            /*white-space: nowrap;           !* Prevent text from wrapping *!*/
+            overflow: hidden;              /* Hide overflow content */
+            text-overflow: ellipsis;       /* Show '...' when truncated (optional) */
+
+            /* Gradual scaling behavior */
+            transform-origin: center;
+            font-size: clamp(1rem, 5vw, 4rem); /* Scales based on viewport width */
         }
         /* Inner2 with nested column boxes */
         .inner2 {
@@ -147,7 +156,7 @@
         .row3 img
         {
 
-            height: 6em;
+            height: 5em;
             transition: transform 0.3s ease, box-shadow 0.3s ease;
             cursor: pointer;
             margin: .25em;
