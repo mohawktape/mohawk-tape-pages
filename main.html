@@ -113,19 +113,20 @@
 
         .row2-image-main 
         {
-            display: flex;               /* Flexbox for alignment */
-            justify-content: center;     /*!* Center horizontally *!*/
-            align-items: center;         /*!* Center vertically *!*/
-            overflow: hidden;            /* Prevent overflow */
-            height: 100%;                /*!* Allow it to grow based on parent height *!*/
+            display: flex;                  /* Flexbox for alignment */
+            justify-content: center;        /* Center horizontally */
+            align-items: center;            /* Center vertically */
+            overflow: hidden;               /* Prevent overflow */
+            height: auto;                   /* Automatically adjust height based on content */
+            width: auto;                    /* Automatically adjust width based on content */
 
         }
-        .row2-image-main  img
-        {
-            max-width: 100%;             /* Ensure image doesn't exceed container width */
-            min-width: 15rem;
-            /*max-height: 100%;            !* Ensure image doesn't exceed container height *!*/
-            object-fit: contain;        /* !* Scale image proportionally to fit without cropping *!*/
+        .row2-image-main img {
+            width: auto;                    /* Maintain original image width */
+            height: auto;                   /* Maintain original image height */
+            max-width: 100%;                /* Prevent scaling beyond container width */
+            max-height: 100%;               /* Prevent scaling beyond container height */
+            object-fit: contain;            /* Preserve aspect ratio without cropping */
         }
         
 
