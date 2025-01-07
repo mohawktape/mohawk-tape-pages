@@ -1,28 +1,23 @@
 ﻿/* logo*/
 .logo {
-    width: 7em;
-    height: 7em;
-    margin-left: 1em;
+    width: 10em;
+    height: 10em;
+    margin-left: 4em;
     background: url('../assets/images/stamp_300dpi.png') no-repeat center center/contain;
     filter: invert(1);
     cursor: pointer; /* Makes the logo look like a clickable element */
 }
 
-/* Ensures the logo link doesn't have default link styling */
-.logo-link {
-    display: inline-block;
-    text-decoration: none; /* Removes underline from link */
-}
 /* bar*/ 
 .nav {
     position: fixed;
     top: 0;
     width: 100%;
+    height: 6em;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0.5rem;
-    background: rgba(0, 0, 0, 0.9);
+    background: rgba(1, 0, 0, 0.9);
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
     z-index: 10;
 }
@@ -35,7 +30,6 @@
     font-weight: bold;
     font-size: 0.9rem;
     transition: color 0.3s ease;
-    margin-right: 0.5cm;
     padding-right:  1.5rem;
 }
 
