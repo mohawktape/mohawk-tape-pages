@@ -3,13 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox with Nested Rows</title>
+    <title>MohawkTape-Products</title>
     <style>
-
         body {
             background-color: black;
+            color: white;
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            
         }
-        .background {
+        h1 {
+            font-size: clamp(4rem, 5vw, 4rem);
+            text-transform: uppercase;
+            margin: 7.5rem 0 0.5em 0; /* Adjusted margin to move h1 closer to the top */
+            text-align: center;
+            overflow: hidden;
+            transform-origin: center;
+        }
+        p {
+            font-size: 1.4rem;
+            line-height: 1.5;
+            margin: 0 1rem 8rem 1rem; /* Adjusted bottom margin to move p up */
+            margin-bottom: 2em;
+            text-align: center;
+        }
+        .background-con {
             position: absolute;
             top: 8em;
             left: 50%;
@@ -21,227 +38,45 @@
             filter: brightness(100%);
             z-index: -1;
         }
+        
+        
         .main {
             display: flex;
             flex-direction: column;
             height: 100vh;
             justify-content: space-evenly;
             align-items: center;
+            /*background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0.2) 80%, rgba(255, 0, 0, 0) 100%);*/
+            margin: 0;
+            padding: 0;
             /*background: orangered;*/
-            
-            /*background-image: linear-gradient(to bottom, black 0%, black 95% , red 100%);*/
-            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 85%, rgba(0, 0, 0, 0.2) 95%, rgba(255, 0, 0, 0) 100%);
-
-        .box {
+        }
+        /*main rows*/
+        .main-con {
+            display: flex;
             flex: 1;
             width: 100%;
-            display: flex;
             justify-content: center;
             align-items: center;
-            /*border: 1px solid white;*/
-            
+            border: 1px solid white;
         }
-
-        .box-nav {
-            display: flex;
-            align-items: center;
+        
+        /* navigation bar*/
+        .nav-con {
             justify-content: space-between;
-            /*background-color: red;*/
-            width: 100%;
-            min-height: 4rem;
+            min-height: 6rem;
             max-height: 6rem;
+            /*background-color: red;*/
         }
-
-        .box-nav a {
+        .nav-con a {
             color: white;
             text-decoration: none;
             text-transform: uppercase;
             font-weight: bold;
-            font-size: 0.9rem;
+            font-size: 1rem;
             transition: color 0.3s ease;
             padding-right:  1rem;
         }
-
-        .box-foot {
-            /*background-color: blue;*/
-            max-height: 4rem;
-            min-height: 2rem
-        }
-
-        .box2 {
-            display: flex;
-            flex-direction: row;
-            /*background-color: green;*/
-        }
-
-        .inner-box {
-            margin: 2rem 0 0.5em 0;
-            flex: 1;
-            height: 100%;
-            /*border: 1px solid white;*/
-            /*background-color: purple;*/
-        }
-
-        .inner1 {
-            /*background-color: orange;*/
-            /*border: 1px solid white;*/
-        }
-
-        .inner-box h1 {
-            color: white;
-            text-transform: uppercase;
-            margin: 7.5rem 0 0.5em 0;
-            text-align: center;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            transform-origin: center;
-            font-size: clamp(1rem, 5vw, 4rem);
-        }
-        .inner-box p {
-            color: white;
-            margin: 7.5rem 0 0.5em 0;
-            text-align: center;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            transform-origin: top;
-            font-size: clamp(1rem, 3vw, 4rem);
-        }
-
-        .inner2 {
-            display: flex;
-            flex-direction: column;
-            /*background-color: yellow;*/
-            
-            justify-content: flex-end; /* Push the button to the bottom */
-            align-items: center; /* Center the button horizontally */
-        }
-
-        .inner3 {
-            display: flex;
-            flex-direction: column;
-            /*overflow: hidden; !* Prevent overflow from causing scaling *!*/
-            /*width: 100%; !* Ensure the container takes full width *!*/
-            /*height: auto; !* Allow height to grow based on content but avoid scaling *!*/
-            /*border: 1px solid white;*/
-            /*background: darkslategray;*/
-        }
-
-        .inner3-row1 {
-            flex: 1;
-            padding: 1rem;
-            /*background-color: lightpink;*/
-            /*border: 1px solid white;*/
-        }
-
-        .inner3-row2 {
-            flex: 1;
-            /*margin: 1rem 0 0.5em 0;*/
-            /*background-color: darkblue;*/
-            /*border: 1px solid white;*/
-            overflow-x: visible;
-        }
-
-        .inner3-row3 {
-            display: flex;
-            flex-direction: column; /* Arrange children in a column */
-            justify-content: flex-end; /* Push the button to the bottom */
-            align-items: center; /* Center the button horizontally */
-            flex: 1;
-            padding: 1rem;
-            /*background-color: palevioletred;*/
-            /*border: 1px solid white;*/
-            /*background-color: palevioletred;*/
-            /*border: 1px solid white;*/
-            
-        }
-        .inner3-row3 button {
-            margin-top: auto; /* Ensures the button stays at the bottom */
-        }
-        .inner3 ul {
-            list-style-type: disc;
-            padding-left: 2rem;
-            color: white;
-            margin: 1rem 0 0.5em 0;
-            /*font-size: clamp(1rem, 1vw, 4rem);*/
-            transform-origin: top;
-
-        }
-        .inner3 p {
-            color: white;
-            margin: 1rem 0 0.5em 0;
-            text-align: center;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            transform-origin: top;
-            font-size: clamp(1rem, 2vw, 4rem);
-        }
-
-        .nested-row {
-            width: 100%;
-            /*border: 1px solid white;*/
-            display: flex;
-            justify-content: center;  /* Center horizontally */
-            align-items: flex-start;  /* Align to the top of the container */
-            transform-origin: top;
-        }
-
-        .row1 {
-            /*display: flex;*/
-            /*align-items: center;*/
-            /*justify-content: center;*/
-            /*background-color: purple;*/
-            
-        }
-        .row2-image-main {
-            display: flex;
-            /*justify-content: center;  !* Center horizontally *!*/
-            /*align-items: flex-start;  !* Align to the top of the container *!*/
-            /*overflow: hidden;*/
-            /*height: auto;*/
-            /*width: auto;*/
-            /*background: chartreuse;*/
-        }
-        .row2-image-main img {
-            /*width: auto;*/
-            /*height: auto;*/
-            max-width: 100%;
-            max-height: 100%;
-            object-fit: contain;
-            /*margin: 1rem 0 4rem 0; !* Reduce bottom margin, or adjust as needed *!*/
-        }
-        
-
-        .row3 {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: .5em;
-            /*background-color: lightgreen;*/
-            /*margin: 1rem 0 2rem 0; !* Reduce bottom margin, or adjust as needed *!*/
-        }
-        .row3 img {
-            height: 6em;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            cursor: pointer;
-            margin: .25em;
-        }
-        /* Hover effect for the image */
-        .row3 img:hover {
-            transform: translateY(-0.8em); /* Move the image up slightly */
-            box-shadow: 0 1em 2em rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
-        }
-
-        /* Active effect when the image is clicked */
-        .row3 img:active {
-            transform: scale(0.98); /* Slightly shrink the image when clicked */
-            /*box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.15); /* Lighter shadow when clicked */
-        }
-
-        .btn {
-            position: static;
-        }
-
-
         .nav-logo {
             height:100%;
             width: 10em;
@@ -256,7 +91,112 @@
             align-items: center;
             height: 100%;
         }
+        
+        /*!*main rows*!*/
+        .body-con 
+        {
+            margin: 0.1rem  0.5em 0;
+            /*background-color: indianred;*/
+        }
+        
+        .row-flex {
+            display: flex;
+            flex: 1;
+            height: 100%;
+            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0.2) 60%, rgba(255, 0, 0, 0) 100%);
+            /*background-color: purple;*/
+        }
+        /* main rows - colum A*/
+        .row-flex h1 {
+            margin: 7.5rem 0 0.5em 0;
+            text-overflow: ellipsis;
+            font-size: clamp(1rem, 6vw, 6rem);
+        }
+        .row-flex__title {
+            /*background-color: orange;*/
+            /*border: 1px solid white;*/
+        }
 
+        /*main rows - colum B*/
+        .row-flex__imageGallery {
+            flex-direction: column;
+            justify-content: flex-start; /* Push the button to the bottom */
+            align-items: center; /* Center the button horizontally */
+            /*background-color: yellow;*/
+        }
+        .row-flex__imageGallery-title {
+            /*display: flex;*/
+            /*align-items: ;*/
+            /*justify-content: flex-start;*/
+            /*background-color: brown;*/
+
+        }
+        .row-flex__imageGallery-title p1 {
+            margin: 1rem 0 0 0;
+            text-overflow: ellipsis;
+            text-align: justify-all;
+            font-size: clamp(1.5em, 8vw, 1rem);
+        }
+        .row-flex__imageGallery-image {
+            margin: 1em 0 0.1em 0;
+            display: flex;
+            /*justify-content: center;  !* Center horizontally *!*/
+            /*align-items: flex-start;  !* Align to the top of the container *!*/
+            /*overflow: hidden;*/
+            /*height: auto;*/
+            /*width: auto;*/
+            /*background: chartreuse;*/
+        }
+        .row-flex__imageGallery-image img {
+            /*width: auto;*/
+            /*height: auto;*/
+            max-width: 100%;
+            max-height: 100%;
+            object-fit: contain;
+            border: 2px solid white;  
+            border-radius: 8px;     
+            padding: 2px;            
+        }
+        .row-flex__imageGallery-con {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            transform-origin: top;
+            /*border: 1px solid white;*/
+        }
+        .row-flex__imageGallery-thumbnails {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: .5em;
+            background: black;
+            width: auto;
+            border: 2px solid white;
+            border-radius: 8px;
+            /*background-color: lightgreen;*/
+            /*margin: 1rem 0 2rem 0; !* Reduce bottom margin, or adjust as needed *!*/
+        }
+        .row-flex__imageGallery-thumbnails img {
+            height: 6em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+            margin: .25em;
+            border: 2px solid white;
+            border-radius: 8px;
+            padding: 1px;
+        }
+        .row-flex__imageGallery-thumbnails img:hover {
+            transform: translateY(-0.8em); /* Move the image up slightly */
+            box-shadow: 0 1em 2em rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+        }
+        .row-flex__imageGallery-thumbnails img:active {
+            transform: scale(0.98); /* Slightly shrink the image when clicked */
+            box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.15);
+        }
+        .btn {
+            position: static;
+        }
         .btn {
             padding: 0.8rem 2rem;
             font-size: 1rem;
@@ -275,49 +215,113 @@
             background: white;
             color: black;
         }
+        
+        /*main rows -colum C*/
+        .row-flex__col {
+            flex-direction: column;
+            background: darkslategray;
+            
+        }
+        .row-flex__col-text {
+            flex: 1;
+            padding: 1rem;
+            background-color: lightpink;
+        }
+        .row-flex__col-content {
+            flex: 1;
+            overflow-x: visible;
+            background-color: darkblue;
+        }
+        .row-flex__col ul {
+            list-style-type: disc;
+            padding-left: 2rem;
+            color: white;
+            margin: 1rem 0 0.5em 0;
+            /*font-size: clamp(1rem, 1vw, 4rem);*/
+            transform-origin: top;
+
+        }
+        /*.row-flex__col p {*/
+        /*    color: white;*/
+        /*    margin: 1rem 0 0.5em 0;*/
+        /*    text-align: center;*/
+        /*    overflow: hidden;*/
+        /*    text-overflow: ellipsis;*/
+        /*    transform-origin: top;*/
+        /*    font-size: clamp(1rem, 2vw, 4rem);*/
+        /*}*/
+        .row-flex__col-button {
+            display: flex;
+            flex-direction: column; /* Arrange children in a column */
+            justify-content: center; /* Push the button to the bottom */
+            align-items: center; /* Center the button horizontally */
+            flex: 1;
+            padding: 1rem;
+            
+            /*background-color: palevioletred;*/
+            /*border: 1px solid white;*/
+            /*background-color: palevioletred;*/
+            /*border: 1px solid white;*/
+            
+        }
+        .row-flex__col-button button {
+            /*margin-top: auto; !* Ensures the button stays at the bottom *!*/
+            margin-bottom: auto;
+        }
+
+        /*foot*/
+        .foot-con {
+            width: 100%;
+            max-height: 4rem;
+            min-height: 2rem;
+            border: 1px solid white;
+            background-color: blue;
+        }
+        
+        /*resize*/
         @media (max-width: 768px) { /* Target iPhone and similar devices */
-            .inner1 {
+            .row-flex__title {
                 display: none; /* Hide .inner1 */
             }
-            .background{
+            .background-con{
                 /*width: 750px;*/
                 /*height: 1334px;*/
                 background: url('./assets/images/background-750x1334.png') no-repeat center top;
             }
-            .inner3-row2 {
+            .row-flex__col-content {
                 /*overflow-x: scroll;*/
             }
         }
+
     </style>
 </head>
 <body>
-
 <div class="main">
-    <div class="background"></div>
-    <div class="box box-nav">
+    <div class="background-con"></div>
+    <div class="main-con nav-con">
         <a href="index.html" class="nav-logo-link">
             <div class="nav-logo"></div>
         </a>
-        <div class="box-navr">
+        <div class="container-nav">
             <a href="index.html">Home</a>
             <a href="product.html">Products</a>
             <a href="index.html">About</a>
             <a href="contact.html">Contact</a>
         </div>
     </div>
-
-    <div class="box box2">
-        <div class="inner-box inner1">
+    <div class="main-con body-con">
+        <div class="row-flex row-flex__title">
             <h1>Give your game the Mohawk edge</h1>
         </div>
-
-        <div class="inner-box inner2">
-            <div class="nested-row row1">d</div>
-            <div class="nested-row row2-image-main">
-                <img id="mainImage" src="assets/images/product1.png" alt="Main Product Image">
-                <div class="row2-image-main" style="background-image: url('assets/images/product1.png');"></div>
+        <div class="row-flex row-flex__imageGallery">
+            <div class="row-flex__imageGallery-con row-flex__imageGallery-title">
+                <p1></p1>
             </div>
-            <div class="nested-row row3">
+            <div class="row-flex__imageGallery-con row-flex__imageGallery-image">
+                <img id="mainImage" src="assets/images/product1.png" alt="Main Product Image">
+                <div class="row-flex__imageGallery-image" style="background-image: url('assets/images/product1.png');"></div>
+            </div>
+            <div class="row-flex__imageGallery-con row-flex__imageGallery-thumbnails">
                 <img src="assets/images/product1.png" alt="Product Image 1" onclick="changeImage('assets/images/product1.png')">
                 <img src="assets/images/product2.png" alt="Product Image 2" onclick="changeImage('assets/images/product2.png')">
                 <img src="assets/images/product3.png" alt="Product Image 3" onclick="changeImage('assets/images/product3.png')">
@@ -325,9 +329,8 @@
                 <img src="assets/images/product4.png" alt="Product Image 4" onclick="changeImage('assets/images/product4.png')">
             </div>
         </div>
-
-        <div class="inner-box inner3">a
-            <div class="inner3-row1">1
+        <div class="row-flex row-flex__col">a
+            <div class="row-flex__col-text">1
                 <p>Take control of your game
                     with Mohawk's adjustable,
                     pre-weighted strips.
@@ -338,9 +341,9 @@
                     full potential is simple,
                     fast, and hassle-free.</p>
             </div>
-            <div class="inner3-row2">2
+            <div class="row-flex__col-content">2
                 <div class="mohawk-package">
-                    <h>Mohawk Package Contents</h>
+                    <h1>Mohawk Package Contents</h1>
                     <div class="package-item">
                         <p>Interlocking Lead Strips (2 x 3g)</p>
                     </div>
@@ -352,15 +355,13 @@
                     </div>
                 </div>
             </div>
-            <div class="inner3-row3">3
+            <div class="row-flex__col-button">3
                 <button class="btn" onclick="buyNow()">Shop Soon</button>
             </div>
         </div>
     </div>
-
-    <div class="box box-foot">d</div>
+    <div class="main-con foot-con">bosdfsdgsddddddddddddddddddddddddddo</div>
 </div>
-
 <script>
     function changeImage(image) {
         const mainImage = document.getElementById('mainImage');
@@ -372,6 +373,5 @@
         window.location.href = 'https://mohawktape.myshopify.com/products/mohawktape-adjustable-system';
     }
 </script>
-
 </body>
 </html>
