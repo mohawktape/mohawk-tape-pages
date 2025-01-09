@@ -26,6 +26,8 @@
             margin: 0 1rem 2em;
             text-align: center;
         }
+        
+        
         .background-con {
             position: absolute;
             top: 8em;
@@ -280,25 +282,16 @@
         
         /*resize*/
         @media (max-width: 768px) { /* Target iPhone and similar devices */
+            .background-con{
+                background: url('./assets/images/background-750x1334.png') no-repeat center top;
+            }
             .row-flex__title {
                 display: none; /* Hide .inner1 */
             }
-            .background-con{
-                /*width: 750px;*/
-                /*height: 1334px;*/
-                background: url('./assets/images/background-750x1334.png') no-repeat center top;
-            }
-            .row-flex__col-content {
-                /*overflow-x: scroll;*/
+            .row-flex__col {
+                display: none; /* Hide .inner1 */
             }
         }
-
-        @media screen and (max-width: 768px) {
-            .background-con {
-                background: url('./assets/images/background-750x1334.png') no-repeat center top;
-            }
-        }
-
     </style>
 </head>
 <body>
@@ -366,7 +359,9 @@
             </div>
         </div>
     </div>
-    <div class="main-con foot-con">bosdfsdgsddddddddddddddddddddddddddo</div>
+    <div class="main-con foot-con">
+        
+    </div>
 </div>
 <script>
     function changeImage(image) {
