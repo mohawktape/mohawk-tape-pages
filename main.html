@@ -12,32 +12,53 @@
             
         }
         h1 {
-            font-size: clamp(4rem, 5vw, 4rem);
+            /*font-familnt-size: clamp(4rem, 5vw, 4rem);*/
+            font-size: clamp(1rem, 5vw, 6rem);
             text-transform: uppercase;
-            margin: 7.5rem 0 0.5em 0; /* Adjusted margin to move h1 closer to the top */
+            text-align: center;
+            overflow: hidden;
+            transform-origin: center;
+        }
+        h2 {
+            /*font-familnt-size: clamp(4rem, 5vw, 4rem);*/
+            font-size: clamp(1rem, 1.5vw, 6rem);
+            text-transform: uppercase;
             text-align: center;
             overflow: hidden;
             transform-origin: center;
         }
         p {
-            font-size: 1.4rem;
+            /*font-size: 1.4rem;*/
+            font-size: clamp(1rem, 1.5vw, 2rem);
             line-height: 1.5;
             /* Adjusted bottom margin to move p up */
-            margin: 0 1rem 2em;
+            /*margin: 0 1rem 1em;*/
+            text-align: center;
+        }
+        p {
+            /*font-size: 1.4rem;*/
+            font-size: clamp(1rem, 1.5vw, 2rem);
+            line-height: 1.5;
+            /* Adjusted bottom margin to move p up */
+            /*margin: 0 1rem 1em;*/
             text-align: center;
         }
         
         
         .background-con {
-            position: absolute;
-            top: 8em;
+            position: fixed; /* Fixes the position relative to the viewport */
+            bottom: 0.0em; /* Offset from the bottom of the window */
             left: 50%;
-            transform: translateX(-50%);
+            transform: translateX(-50%) translatey(0%);
             width: 1920px;
             height: 1080px;
             background: url('./assets/images/background-1920x1080.png') no-repeat center top;
             background-size: contain;
             filter: brightness(100%);
+            z-index: -2;
+        }
+        .background-con--mask{
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0.2) 80%,rgba(255, 0, 0, 0) 90%, rgba(255, 0, 0, 0) 90%);
             z-index: -1;
         }
         
@@ -60,7 +81,7 @@
             width: 100%;
             justify-content: center;
             align-items: center;
-            border: 1px solid white;
+            /*border: 1px solid white;*/
         }
         
         /* navigation bar*/
@@ -68,7 +89,7 @@
             justify-content: space-between;
             min-height: 6rem;
             max-height: 6rem;
-            /*background-color: red;*/
+            background-color: black
         }
         .nav-con a {
             color: white;
@@ -105,18 +126,20 @@
             display: flex;
             flex: 1;
             height: 100%;
-            background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 50%, rgba(0, 0, 0, 0.2) 60%, rgba(255, 0, 0, 0) 100%);
+            /*background-image: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0.2) 70%, rgba(255, 0, 0, 0) 100%);*/
             /*background-color: purple;*/
+            /*border: 1px solid white;*/
         }
         /* main rows - colum A*/
         .row-flex h1 {
             margin: 7.5rem 0 0.5em 0;
             text-overflow: ellipsis;
-            font-size: clamp(1rem, 6vw, 6rem);
+            /*font-size: clamp(1rem, 6vw, 6rem);*/
         }
         .row-flex__title {
             /*background-color: orange;*/
             /*border: 1px solid white;*/
+            /*background: linear-gradient(to right, rgba(0, 0, 0, 1) 2%, rgba(0, 0, 0, 0.2) 5%,rgba(255, 0, 0, 0) 100%);*/
         }
 
         /*main rows - colum B*/
@@ -138,6 +161,7 @@
             text-overflow: ellipsis;
             text-align: justify-all;
             font-size: clamp(1.5em, 8vw, 1rem);
+            
         }
         .row-flex__imageGallery-image {
             margin: 1em 0 0.1em 0;
@@ -221,23 +245,25 @@
         /*main rows -colum C*/
         .row-flex__col {
             flex-direction: column;
+            background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 97%, rgba(0, 0, 0, 0.2) 100%,rgba(255, 0, 0, 0) 100%);
             /*background: darkslategray;*/
             
         }
         .row-flex__col-phone {
             flex-direction: column;
+            background: linear-gradient(to top, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0.2) 100%,rgba(255, 0, 0, 0) 100%);
             /*background: darkslategray;*/
 
         }
         .row-flex__col-text {
-            flex: 1;
+            /*flex: 1;*/
             padding: 1rem;
-            background-color: lightpink;
+            /*background-color: lightpink;*/
         }
         .row-flex__col-content {
             flex: 1;
             overflow-x: visible;
-            background-color: darkblue;
+            /*background-color: darkblue;*/
         }
         .row-flex__col ul {
             list-style-type: disc;
@@ -262,8 +288,9 @@
             flex-direction: column; /* Arrange children in a column */
             justify-content: center; /* Push the button to the bottom */
             align-items: center; /* Center the button horizontally */
-            flex: 1;
-            padding: 1rem;
+            /*flex: 1;*/
+            padding: 2rem;
+            
             
             /*background-color: palevioletred;*/
             /*border: 1px solid white;*/
@@ -281,8 +308,8 @@
             /*width: 100%;*/
             /*max-height: 4rem;*/
             /*min-height: 2rem;*/
-            border: 1px solid white;
-            background-color: blue;
+            /*border: 1px solid white;*/
+            /*background-color: blue;*/
         }
         
         /*resize*/
@@ -312,6 +339,7 @@
 </head>
 <body>
 <div class="main">
+    <div class="background-con background-con--mask"></div>
     <div class="background-con"></div>
     <div class="main-con nav-con">
         <a href="index.html" class="nav-logo-link">
@@ -344,8 +372,9 @@
                 <img src="assets/images/product4.png" alt="Product Image 4" onclick="changeImage('assets/images/product4.png')">
             </div>
         </div>
-        <div class="row-flex row-flex__col">a
-            <div class="row-flex__col-text">1
+        <div class="row-flex row-flex__col">
+            <div class="row-flex__col-text">
+                <h2>Mohawk Starter Pack</h2>
                 <p>Take control of your game
                     with Mohawk's adjustable,
                     pre-weighted strips.
@@ -356,9 +385,9 @@
                     full potential is simple,
                     fast, and hassle-free.</p>
             </div>
-            <div class="row-flex__col-content">2
-                <div class="mohawk-package">
-                    <h1>Mohawk Package Contents</h1>
+            <div class="row-flex__col-content">
+<!--                <div class="mohawk-package">-->
+                    <h2>Package Contents</h2>
                     <div class="package-item">
                         <p>Interlocking Lead Strips (2 x 3g)</p>
                     </div>
@@ -367,17 +396,22 @@
                     </div>
                     <div class="package-item">
                         <p>Edge Guard Tape (1 x 800mm)</p>
-                    </div>
+<!--                    </div>-->
                 </div>
             </div>
-            <div class="row-flex__col-button">3
+            <div class="row-flex__col-button">
                 <button class="btn" onclick="buyNow()">Shop Soon</button>
             </div>
+ 
         </div>
     </div>
     <div class="main-con foot-con">
-        <div class="row-flex  row-flex__col-phone">a
-            <div class="row-flex__col-text">1
+        <div class="row-flex  row-flex__col-phone">
+            <div class="row-flex__col-button">
+                <button class="btn" onclick="buyNow()">Shop Soon</button>
+            </div>
+            <div class="row-flex__col-text">
+                <h2>Mohawk Starter Pack</h2>
                 <p>Take control of your game
                     with Mohawk's adjustable,
                     pre-weighted strips.
@@ -388,9 +422,9 @@
                     full potential is simple,
                     fast, and hassle-free.</p>
             </div>
-            <div class="row-flex__col-content">2
-                <div class="mohawk-package">
-                    <h1>Mohawk Package Contents</h1>
+            <div class="row-flex__col-content">
+<!--                <div class="mohawk-package">-->
+                    <h2>Package Contents</h2>
                     <div class="package-item">
                         <p>Interlocking Lead Strips (2 x 3g)</p>
                     </div>
@@ -400,13 +434,14 @@
                     <div class="package-item">
                         <p>Edge Guard Tape (1 x 800mm)</p>
                     </div>
-                </div>
+<!--                </div>-->
             </div>
-            <div class="row-flex__col-button">3
-                <button class="btn" onclick="buyNow()">Shop Soon</button>
-            </div>
+
         </div>
     </div>
+    <footer class="footer">
+        <p style="font-size: 0.8em">&copy; 2025 Mohawk Tape Ltd| NZBN 9429052537066 | All Rights Reserved | v0.2.0 <a href="main.html">beta</a></p>
+    </footer>
 </div>
 <script>
     function changeImage(image) {
