@@ -22,8 +22,8 @@
         p {
             font-size: 1.4rem;
             line-height: 1.5;
-            margin: 0 1rem 8rem 1rem; /* Adjusted bottom margin to move p up */
-            margin-bottom: 2em;
+            /* Adjusted bottom margin to move p up */
+            margin: 0 1rem 2em;
             text-align: center;
         }
         .background-con {
@@ -131,8 +131,8 @@
             /*background-color: brown;*/
 
         }
-        .row-flex__imageGallery-title p1 {
-            margin: 1rem 0 0 0;
+        .row-flex__imageGallery-title p {
+            margin: 1rem 0 2rem 0;
             text-overflow: ellipsis;
             text-align: justify-all;
             font-size: clamp(1.5em, 8vw, 1rem);
@@ -219,7 +219,7 @@
         /*main rows -colum C*/
         .row-flex__col {
             flex-direction: column;
-            background: darkslategray;
+            /*background: darkslategray;*/
             
         }
         .row-flex__col-text {
@@ -293,6 +293,12 @@
             }
         }
 
+        @media screen and (max-width: 768px) {
+            .background-con {
+                background: url('./assets/images/background-750x1334.png') no-repeat center top;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -315,7 +321,7 @@
         </div>
         <div class="row-flex row-flex__imageGallery">
             <div class="row-flex__imageGallery-con row-flex__imageGallery-title">
-                <p1></p1>
+                <p></p>
             </div>
             <div class="row-flex__imageGallery-con row-flex__imageGallery-image">
                 <img id="mainImage" src="assets/images/product1.png" alt="Main Product Image">
