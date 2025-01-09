@@ -250,6 +250,7 @@
             
         }
         .row-flex__col-phone {
+            /*margin-top: 4em;*/
             flex-direction: column;
             background: linear-gradient(to top, rgba(0, 0, 0, 1) 95%, rgba(0, 0, 0, 0.2) 100%,rgba(255, 0, 0, 0) 100%);
             /*background: darkslategray;*/
@@ -323,11 +324,18 @@
                 /*background-color: red !important; !* Debugging *!*/
                 background: url('./assets/images/background-750x1334.png') no-repeat center top;
             }
+            .background-con--mask{
+                background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0.2) 80%,rgba(255, 0, 0, 0) 90%, rgba(255, 0, 0, 0) 90%);
+                z-index: -1;
+            }
             .row-flex__title {
                 display: none; /* Hide .inner1 */
             }
             .row-flex__col{
                 display: none; /* Hide .inner1 */
+            }
+            .row-flex__col-button{
+                margin: 1em;
             }
         }
         @media (min-width: 769px) {
@@ -400,7 +408,7 @@
                 </div>
             </div>
             <div class="row-flex__col-button">
-                <button class="btn" onclick="buyNow()">Shop Soon</button>
+                <button class="btn" onclick="buyNow()">Buy Now</button>
             </div>
  
         </div>
@@ -408,7 +416,7 @@
     <div class="main-con foot-con">
         <div class="row-flex  row-flex__col-phone">
             <div class="row-flex__col-button">
-                <button class="btn" onclick="buyNow()">Shop Soon</button>
+                <button class="btn" onclick="buyNow()">Buy Now</button>
             </div>
             <div class="row-flex__col-text">
                 <h2>Mohawk Starter Pack</h2>
@@ -440,7 +448,7 @@
         </div>
     </div>
     <footer class="footer">
-        <p style="font-size: 0.8em">&copy; 2025 Mohawk Tape Ltd| NZBN 9429052537066 | All Rights Reserved | v0.2.0 <a href="main.html">beta</a></p>
+        <p style="font-size: 0.8em">&copy; 2025 Mohawk Tape Ltd| NZBN 9429052537066 | All Rights Reserved | v0.2.1 <a href="main.html">beta</a></p>
     </footer>
 </div>
 <script>
