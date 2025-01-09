@@ -224,6 +224,11 @@
             /*background: darkslategray;*/
             
         }
+        .row-flex__col-phone {
+            flex-direction: column;
+            /*background: darkslategray;*/
+
+        }
         .row-flex__col-text {
             flex: 1;
             padding: 1rem;
@@ -273,22 +278,33 @@
 
         /*foot*/
         .foot-con {
-            width: 100%;
-            max-height: 4rem;
-            min-height: 2rem;
+            /*width: 100%;*/
+            /*max-height: 4rem;*/
+            /*min-height: 2rem;*/
             border: 1px solid white;
             background-color: blue;
         }
         
         /*resize*/
         @media (max-width: 768px) { /* Target iPhone and similar devices */
+            body {
+                /*background-color: yellow; !* This should change the body background *!*/
+            }
             .background-con{
+                width: 750px;
+                height: 1334px;
+                /*background-color: red !important; !* Debugging *!*/
                 background: url('./assets/images/background-750x1334.png') no-repeat center top;
             }
             .row-flex__title {
                 display: none; /* Hide .inner1 */
             }
-            .row-flex__col {
+            .row-flex__col{
+                display: none; /* Hide .inner1 */
+            }
+        }
+        @media (min-width: 769px) {
+            .row-flex__col-phone{
                 display: none; /* Hide .inner1 */
             }
         }
@@ -360,7 +376,36 @@
         </div>
     </div>
     <div class="main-con foot-con">
-        
+        <div class="row-flex  row-flex__col-phone">a
+            <div class="row-flex__col-text">1
+                <p>Take control of your game
+                    with Mohawk's adjustable,
+                    pre-weighted strips.
+                    Instantly fine-tune your
+                    paddle’s balance for power,
+                    control, and stability.
+                    With Mohawk, unlocking your
+                    full potential is simple,
+                    fast, and hassle-free.</p>
+            </div>
+            <div class="row-flex__col-content">2
+                <div class="mohawk-package">
+                    <h1>Mohawk Package Contents</h1>
+                    <div class="package-item">
+                        <p>Interlocking Lead Strips (2 x 3g)</p>
+                    </div>
+                    <div class="package-item">
+                        <p>Interlocking Tape (1 x 800mm)</p>
+                    </div>
+                    <div class="package-item">
+                        <p>Edge Guard Tape (1 x 800mm)</p>
+                    </div>
+                </div>
+            </div>
+            <div class="row-flex__col-button">3
+                <button class="btn" onclick="buyNow()">Shop Soon</button>
+            </div>
+        </div>
     </div>
 </div>
 <script>
