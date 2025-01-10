@@ -1,0 +1,76 @@
+﻿/*.imageGallery {*/
+/*    flex-direction: column;*/
+/*    justify-content: flex-start;*/
+/*    align-items: center;*/
+/*}*/
+/*.row-flex__imageGallery-title {*/
+/*    !*display: flex;*!*/
+/*    !*align-items: ;*!*/
+/*    !*justify-content: flex-start;*!*/
+/*    !*background-color: brown;*!*/
+
+/*}*/
+/*.row-flex__imageGallery-title p {*/
+/*    margin: 1rem 0 2rem 0;*/
+/*    text-overflow: ellipsis;*/
+/*    text-align: justify-all;*/
+/*    font-size: clamp(1.5em, 8vw, 1rem);*/
+
+/*}*/
+/*.row-flex__imageGallery-image {*/
+/*    margin: 1em 0 0.1em 0;*/
+/*    display: flex;*/
+/*    !*justify-content: center;  !* Center horizontally *!*!*/
+/*    !*align-items: flex-start;  !* Align to the top of the container *!*!*/
+/*    !*overflow: hidden;*!*/
+/*    !*height: auto;*!*/
+/*    !*width: auto;*!*/
+/*    !*background: chartreuse;*!*/
+/*}*/
+/*.row-flex__imageGallery-image img {*/
+/*    !*width: auto;*!*/
+/*    !*height: auto;*!*/
+/*    max-width: 100%;*/
+/*    max-height: 100%;*/
+/*    object-fit: contain;*/
+/*    border: 2px solid white;*/
+/*    border-radius: 8px;*/
+/*    padding: 2px;*/
+/*}*/
+/*.row-flex__imageGallery-con {*/
+/*    width: 100%;*/
+/*    display: flex;*/
+/*    justify-content: center;*/
+/*    align-items: flex-start;*/
+/*    transform-origin: top;*/
+/*    !*border: 1px solid white;*!*/
+/*}*/
+/*.row-flex__imageGallery-thumbnails {*/
+/*    display: flex;*/
+/*    align-items: center;*/
+/*    justify-content: center;*/
+/*    gap: .5em;*/
+/*    background: black;*/
+/*    width: auto;*/
+/*    border: 2px solid white;*/
+/*    border-radius: 8px;*/
+/*    !*background-color: lightgreen;*!*/
+/*    !*margin: 1rem 0 2rem 0; !* Reduce bottom margin, or adjust as needed *!*!*/
+/*}*/
+/*.row-flex__imageGallery-thumbnails img {*/
+/*    height: 6em;*/
+/*    transition: transform 0.3s ease, box-shadow 0.3s ease;*/
+/*    cursor: pointer;*/
+/*    margin: .25em;*/
+/*    border: 2px solid white;*/
+/*    border-radius: 8px;*/
+/*    padding: 1px;*/
+/*}*/
+/*.row-flex__imageGallery-thumbnails img:hover {*/
+/*    transform: translateY(-0.8em); !* Move the image up slightly *!*/
+/*    box-shadow: 0 1em 2em rgba(0, 0, 0, 0.2); !* Increase shadow on hover *!*/
+/*}*/
+/*.row-flex__imageGallery-thumbnails img:active {*/
+/*    transform: scale(0.98); !* Slightly shrink the image when clicked *!*/
+/*    box-shadow: 0 0.3em 0.6em rgba(0, 0, 0, 0.15);*/
+/*}*/

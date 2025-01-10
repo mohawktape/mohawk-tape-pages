@@ -1,66 +1,138 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Buy MohawkTape</title>
-  <link rel="stylesheet" href="assets/main.css">
-  <link rel="stylesheet" href="assets/nav.css">
-  <link rel="stylesheet" href="assets/button.css">
-  <link rel="stylesheet" href="assets/image-selector.css">
-  <link rel="stylesheet" href="assets/header.css">
-
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MohawkTape-Products</title>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-<!-- Navigation Bar -->
-<div id="nav-container"></div>
-<script>
-  fetch('nav.html')
-          .then(response => response.text())
-          .then(data => document.getElementById('nav-container').innerHTML = data);
-</script>
-
-<!-- Main Content -->
-<div class="container">
-  <h1>Give your game the Mohawk edge</h1>
-  <div class="background"></div>
-  <div class="center-panel">
-    <div class="product-image" style="background-image: url('assets/images/product1.png');"></div>
-  </div>
-  <div class="right-panel">
-    <div class="description">
-      <h3>MohawkTape Adjustable System</h3>
-      <p>Experience the best in balance technology with our innovative MohawkTape Adjustable System. Fine-tune your game with precision.</p>
-      <div class="left-panel">
-        <div class="image-selector">
-          <img src="assets/images/product1.png" alt="Product Image 1" onclick="changeImage('assets/images/product1.png')">
-          <img src="assets/images/product2.png" alt="Product Image 2" onclick="changeImage('assets/images/product2.png')">
-          <img src="assets/images/product3.png" alt="Product Image 3" onclick="changeImage('assets/images/product3.png')">
-          <img src="assets/images/product4.png" alt="Product Image 4" onclick="changeImage('assets/images/product4.png')">
+<div class="flex-column align-center height-100vh">
+    <div class="background background-mask"></div>
+    <div class="background "></div>
+<!--    colum A-->
+    <div class="flex-container navigation">
+        <a href="index.html" class="navigation-logo-link">
+            <div class="navigation-logo"></div>
+        </a>
+        <div class="container-nav">
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
         </div>
-        <button class="btn" onclick="buyNow()">Shop Soon</button>
-      </div>
-
     </div>
-    
-  </div>
+<!--    colum B-->
+    <div class="flex-container body-wide__container">
+<!--        row A -->
+        <div class="flex-row flex-1 flex-container__hide-on-small">
+            <div class="slogan">
+                <h1>Give your game the Mohawk edge</h1>
+            </div>              
+        </div>
+<!--        row B -->
+        <div class="flex-row flex-1 ">
+            <div class="flex-column flex-1 align-center imageGallery">
+                <div class=" imageGallery__title">
+                    <p></p>
+                </div>
+                <div class=" imageGallery__image">
+                    <img id="mainImage" src="assets/images/product1.png" alt="Main Product Image">
+                    <div class="imageGallery__image" style="background-image: url('assets/images/product1.png');"></div>
+                </div>
+                <div class=" imageGallery__thumbnails">
+                    <img src="assets/images/product1.png" alt="Product Image 1" onclick="changeImage('assets/images/product1.png')">
+                    <img src="assets/images/product2.png" alt="Product Image 2" onclick="changeImage('assets/images/product2.png')">
+                    <img src="assets/images/product3.png" alt="Product Image 3" onclick="changeImage('assets/images/product3.png')">
+                    <img src="assets/images/product4.png" alt="Product Image 4" onclick="changeImage('assets/images/product4.png')">
+                    <img src="assets/images/product4.png" alt="Product Image 4" onclick="changeImage('assets/images/product4.png')">
+                </div>
+            </div>
+        </div>
+<!--        row C-->
+        <div class="flex-row flex-1 flex-container__hide-on-small">
+            <div class="flex-row flex-1 package">
+                <div class="package__title">
+                    <p></p>
+                </div>
+                <div class="package__overview">
+                    <h2>Mohawk Starter Pack</h2>
+                    <p>Take control of your game
+                        with Mohawk's adjustable,
+                        pre-weighted strips.
+                        Instantly fine-tune your
+                        paddle’s balance for power,
+                        control, and stability.
+                        With Mohawk, unlocking your
+                        full potential is simple,
+                        fast, and hassle-free.</p>
+                </div>
+                <div class="package__content">
+                    <h2>Package Contents</h2>
+                    <div class="package-item">
+                        <p>Interlocking Lead Strips (2 x 3g)</p>
+                    </div>
+                    <div class="package-item">
+                        <p>Interlocking Tape (1 x 800mm)</p>
+                    </div>
+                    <div class="package-item">
+                        <p>Edge Guard Tape (1 x 800mm)</p>
+                    </div>
+                </div>
+                <div class="package__button">
+                    <button class="btn" onclick="buyNow()">Buy Now</button>
+                </div>
+            </div>
+        </div>
+    </div>
+<!--    colum C-->
+    <div class="flex-container body-narrow__container ">
+        <div class="flex-row flex-container__hide-on-large ">
+            <div class="flex-row flex-1 package ">
+                <div class="package__button">
+                    <button class="btn" onclick="buyNow()">Buy Now</button>
+                </div>
+                <div class="package__overview">
+                    <h2>Mohawk Starter Pack</h2>
+                    <p>Take control of your game
+                        with Mohawk's adjustable,
+                        pre-weighted strips.
+                        Instantly fine-tune your
+                        paddle’s balance for power,
+                        control, and stability.
+                        With Mohawk, unlocking your
+                        full potential is simple,
+                        fast, and hassle-free.</p>
+                </div>
+                <div class="package__content">
+                    <h2>Package Contents</h2>
+                    <div class="package-item">
+                        <p>Interlocking Lead Strips (2 x 3g)</p>
+                    </div>
+                    <div class="package-item">
+                        <p>Interlocking Tape (1 x 800mm)</p>
+                    </div>
+                    <div class="package-item">
+                        <p>Edge Guard Tape (1 x 800mm)</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer class="footer">
+        <p style="font-size: 0.8em">&copy; 2025 Mohawk Tape Ltd| NZBN 9429052537066 | All Rights Reserved | v1.0.0 <a href="main.html">beta</a></p>
+    </footer>
 </div>
-
-
-
-
 <script>
-  function changeImage(image) {
-    document.querySelector('.product-image').style.backgroundImage = `url('${image}')`;
-  }
+    function changeImage(image) {
+        const mainImage = document.getElementById('mainImage');
+        mainImage.src = image;
 
-  function buyNow() {
-    window.location.href = 'https://mohawktape.myshopify.com/products/mohawktape-adjustable-system';
-  }
+    }
+    function buyNow() {
+        window.location.href = 'https://mohawktape.myshopify.com/products/mohawktape-adjustable-system';
+    }
 </script>
-
 </body>
 </html>
-<footer class="footer">
-  <p4>&copy; 2025 Mohawk Tape Ltd| NZBN 9429052537066 | All Rights Reserved | v0.1.4</p4>
-</footer>
+

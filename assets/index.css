@@ -1,0 +1,11 @@
+﻿.slogan {
+    width: 100%;
+    display: flex;
+    transform-origin: top;
+    height: 100vh
+}
+.slogan h1 {
+    font-size: clamp(5rem, 5vw, 5rem);
+    margin: 1em 0 0.5em 0;
+    text-overflow: ellipsis;
+}

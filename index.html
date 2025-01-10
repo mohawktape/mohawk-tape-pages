@@ -3,33 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MohawkTape</title>
-    <link rel="stylesheet" href="assets/main.css">
-    <link rel="stylesheet" href="assets/header.css">
-    <link rel="stylesheet" href="assets/button.css">
+    <title>MohawkTape-Home</title>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="stylesheet" href="assets/index.css">
 </head>
 <body>
-<!-- Navigation Bar -->
-<div id="nav-container"></div>
-<script>
-    fetch('nav.html')
-        .then(response => response.text())
-        .then(data => document.getElementById('nav-container').innerHTML = data);
-</script>
-
-<!-- Main Content -->
-<div class="container">
+<div class="flex-column align-center height-100vh">
+    <div class="background background-mask"></div>
     <div class="background"></div>
-    <div class="content">
-        <h1>Give your game the Mohawk edge</h1>
-        <p>Instantly fine-tune your pickleball paddle’s balance for power, control, and stability. With Mohawk, it’s simple, fast, and hassle-free.</p>
-        <!-- Button with onclick to open Google -->
-        <!-- <button class="btn" onclick="window.open('https://www.google.com', '_blank')">Coming Soon</button>-->
-        <h2>Coming Soon</h2>
+    <!--    colum A-->
+    <div class="flex-container navigation">
+        <a href="index.html" class="navigation-logo-link">
+            <div class="navigation-logo"></div>
+        </a>
+        <div class="container-nav">
+            <a href="index.html">Home</a>
+            <a href="product.html">Products</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </div>
     </div>
+    <!--    colum B-->
+    <div class="flex-container body-wide__container">
+        <!--        row A -->
+        <div class="flex-row flex-1 flex-container__hide-on-small">
+            
+        </div>
+        <!--        row B -->
+        <div class="flex-row flex-1 ">
+            <div class="slogan flex-column flex-1 justify-flex-start align-center"  >
+                <h1>Give your game the Mohawk edge</h1>
+                <img src="./assets/images/comingSoon.png" alt="Descriptive text about the image">
+            </div>
+        </div>
+        <!--        row C-->
+        <div class="flex-row flex-1 flex-container__hide-on-small">
+        </div>
+    </div>
+    <!--    colum C-->
+    <div class="flex-container body-narrow__container ">
+        <div class="flex-row flex-container__hide-on-large ">
+        </div>
+    </div>
+    <footer class="footer">
+        <p style="font-size: 0.8em">&copy; 2025 Mohawk Tape Ltd| NZBN 9429052537066 | All Rights Reserved | v1.0.0 <a href="main.html">beta</a></p>
+    </footer>
 </div>
-<footer class="footer">
-    <p4>&copy; 2025 Mohawk Tape Ltd| NZBN 9429052537066 | All Rights Reserved | v0.1.8 <a href="main.html">beta</a></p4>
-</footer>
+<script>
+    function changeImage(image) {
+        const mainImage = document.getElementById('mainImage');
+        mainImage.src = image;
+
+    }
+    function buyNow() {
+        window.location.href = 'https://mohawktape.myshopify.com/products/mohawktape-adjustable-system';
+    }
+</script>
 </body>
 </html>
+

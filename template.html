@@ -3,177 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Template</title>
-    <style>
-
-        body {
-            background-color: black;
-        }
-        .background {
-            position: absolute;
-            top: 8em;
-            left: 50%;
-            transform: translateX(-50%);
-            width: 1242px;
-            height: 1440px;
-            background: url('./assets/images/background.png') no-repeat center top;
-            background-size: contain;
-            filter: brightness(100%);
-            z-index: -1;
-        }
-        /* Main container - flexbox, arranged in rows */
-        .main {
-            display: flex;
-            flex-direction: column;
-            height: 100vh;
-            justify-content: space-evenly;
-            align-items: center;
-            width: 100%;
-            /*background-color: black;*/
-            flex-wrap: wrap;
-        }
-
-        /* Child boxes - each with fixed width and height */
-        .box {
-            flex: 1;
-            width: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            border: 1px solid white;
-        }
-
-        .box-nav {
-            display: flex;            /* Flexbox for horizontal layout */
-            align-items: center;      /* Vertically center content */
-            justify-content: space-between; /* Push logo to left and links to right */
-            /*background-color: red;    !* Keep the red background *!*/
-            width: 100%;              /* Full width */
-            padding: 0 1rem;          /* Add padding for spacing */
-            min-height: 2rem;
-        }
-  
-        .box-nav a
-        {
-            color: white;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: bold;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-            padding-right:  1rem;
-
-        }
-
-        .box-foot {
-            /*background-color: blue;*/
-            max-height: 4rem;
-        }
-
-        /* Box 2 with inner row flexbox */
-        .box2 {
-            display: flex;
-            flex-direction: row;
-            /*background-color: green;*/
-        }
-
-        .inner-box {
-            flex: 1;
-            height: 100%;
-        }
-
-        .inner1 {
-            /*background-color: orange;*/
-        }
-
-        /* Inner2 with nested column boxes */
-        .inner2 {
-            display: flex;
-            flex-direction: column;  /* Create rows inside inner2 */
-            /*background-color: yellow;*/
-        }
-
-        .inner3 {
-            /*background-color: pink;*/
-        }
-
-        /* Boxes inside inner2 */
-        .nested-row {
-            flex: 1;  /* Each row takes equal space */
-            width: 100%;  /* Full width of parent */
-            border: 1px solid white;
-        }
-
-        .row1 {
-            /*background-color: lightblue;*/
-        }
-
-        .row2-image-main {
-            /*background-color: lightcoral;*/
-        }
-
-        .row3 {
-            /*background-color: lightgreen;*/
-        }
-
-        .nav-logo
-        {
-            height:100%;
-            width: 10em;
-            min-width: 10em;
-            margin-left: 1em;
-            background: url('assets/images/stamp_300dpi.png') no-repeat center center/contain;
-            filter: invert(1);
-            cursor: pointer;
-        }
-        .nav-logo-link
-        {
-            display: flex;
-            align-items: center;
-            height: 100%;
-        }
-
-        /* Apply max-height when the viewport height is at least 50vh */
-        @media (min-height: 5vh) {
-            .box-nav {
-                max-height: 4rem; /* Limit height to 6rem */
-            }
-    </style>
+    <title>MohawkTape-Template</title>
+    <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
-
-<div class="main">
+<div class="flex-column align-center height-100vh">
+    <div class="background background-mask"></div>
     <div class="background"></div>
-    <!-- Box 1 -->
-    <div class="box box-nav">
-        <a href="index.html" class="nav-logo-link">
-            <div class="nav-logo"></div>
+    <!--    colum A-->
+    <div class="flex-container navigation">
+        <a href="index.html" class="navigation-logo-link">
+            <div class="navigation-logo"></div>
         </a>
-        <div class="box-navr">
+        <div class="container-nav">
             <a href="index.html">Home</a>
             <a href="product.html">Products</a>
-            <a href="index.html">About</a>
+            <a href="about.html">About</a>
             <a href="contact.html">Contact</a>
-        </div> 
-    </div>
-
-    <!-- Box 2 with inner row boxes -->
-    <div class="box box2">
-        <div class="inner-box inner1"></div>
-
-        <!-- Inner2 with 3 vertical rows -->
-        <div class="inner-box inner2">
-            <div class="nested-row row1"></div>
-            <div class="nested-row row2"></div>
-            <div class="nested-row row3"></div>
         </div>
-
-        <div class="inner-box inner3"></div>
     </div>
-
-    <!-- Box 3 -->
-    <div class="box box-foot"></div>
+    <!--    colum B-->
+    <div class="flex-container body-wide__container">
+        <!--        row A -->
+        <div class="flex-row flex-1 flex-container__hide-on-small">
+        </div>
+        <!--        row B -->
+        <div class="flex-row flex-1 ">
+        </div>
+        <!--        row C-->
+        <div class="flex-row flex-1 flex-container__hide-on-small">
+        </div>
+    </div>
+    <!--    colum C-->
+    <div class="flex-container body-narrow__container ">
+        <div class="flex-row flex-container__hide-on-large ">
+        </div>
+    </div>
+    <footer class="footer">
+        <p style="font-size: 0.8em">&copy; 2025 Mohawk Tape Ltd| NZBN 9429052537066 | All Rights Reserved | v1.0.0 <a href="main.html">beta</a></p>
+    </footer>
 </div>
+<script>
+    function changeImage(image) {
+        const mainImage = document.getElementById('mainImage');
+        mainImage.src = image;
 
+    }
+    function buyNow() {
+        window.location.href = 'https://mohawktape.myshopify.com/products/mohawktape-adjustable-system';
+    }
+</script>
 </body>
 </html>
+
