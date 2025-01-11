@@ -141,10 +141,11 @@ p {
 /* navigation bar*/
 .navigation {
     justify-content: space-between;
-    min-height: 1rem;
+    min-height: 3rem;
     max-height: 6rem;
     background-color: black;
     padding-top: 2em;
+    /*border: 5px solid orangered;*/
 }
 .navigation a {
     color: white;
@@ -154,12 +155,15 @@ p {
     font-size: 1rem;
     transition: color 0.3s ease;
     padding-right:  1rem;
+    /*border: 5px solid orangered;*/
+    
 }
 .navigation-logo {
     height:500%;
     width: 10em;
     min-width: 10em;
     margin-left: 1em;
+    margin-bottom: 3em;
     background: url('./images/stamp_300dpi.png') no-repeat center center/contain;
     filter: invert(0);
     cursor: pointer;
