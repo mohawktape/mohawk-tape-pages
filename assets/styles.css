@@ -285,8 +285,8 @@ p {
 /*resize*/
 @media (max-width: 768px) { /* Target iPhone and similar devices */
     .background{
-        /*width: 750px;*/
-        /*height: 1334px;*/
+        width: 750px;
+        height: 1334px;
         background: url('./images/background-750x1334.png') no-repeat center top;
     }
     .background-mask{
