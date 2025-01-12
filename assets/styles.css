@@ -1,49 +1,4 @@
-﻿.navigation-logo {
-    position: relative; /* Enable pseudo-element positioning */
-    height: 500%;
-    width: 10em;
-    min-width: 10em;
-    margin-left: 1em;
-    margin-bottom: 3em;
-    /*background: url('./images/stamp_300dpi.png') no-repeat center center/contain;*/
-    cursor: pointer;
-    overflow: hidden; /* Ensure pseudo-element stays inside the logo */
-    -webkit-mask-image: url('./images/stamp_300dpi_alpha.png'); /* Apply alpha channel as mask */
-    mask-image: url('./images/stamp_300dpi_alpha.png'); /* Support for non-WebKit browsers */
-    -webkit-mask-repeat: no-repeat;
-    mask-repeat: no-repeat;
-    -webkit-mask-position: center;
-    mask-position: center;
-    -webkit-mask-size: contain;
-    mask-size: contain;
-}
-
-.navigation-logo::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 10em;
-
-    background: linear-gradient(
-            90deg,                   /* Diagonal direction */
-            rgba(255, 0, 0, 1)1%,    /* Red at the start */
-            rgba(255, 255 , 0, 1) 50%,   /* Blue in the middle */
-            rgba(255, 0, 0, 1)99%   /* Green at the end */
-    );
-    mix-blend-mode: luminosity; /* Ensures it only affects the visible part */
-    animation: sheen 4s  ease-in-out infinite ; /* Continuous animation */
-    
-}
-
-@keyframes sheen {
-    0% {
-        transform: rotate(0deg);
-    }
-    100% {
-        transform: rotate(360deg);
-    }
-}
+﻿
 /* background */
 .background {
     position: fixed;
@@ -203,21 +158,65 @@ p {
     /*border: 5px solid orangered;*/
     
 }
-/*.navigation-logo {*/
-/*    height:500%;*/
-/*    width: 10em;*/
-/*    min-width: 10em;*/
-/*    margin-left: 1em;*/
-/*    margin-bottom: 3em;*/
-/*    background: url('./images/stamp_300dpi.png') no-repeat center center/contain;*/
-/*    filter: invert(0);*/
-/*    cursor: pointer;*/
-/*    overflow: visible;*/
-/*}*/
+.navigation-logo {
+    position: absolute;
+    height: 500%;
+    width: 10em;
+    /*min-width: 10em;*/
+    margin-left: 1em;
+    /*margin-bottom: 3em;*/
+    background: url('./images/stamp_1200dpi_white.png') no-repeat center center/contain;
+    filter: invert(0);
+    cursor: pointer;
+    overflow: visible;
+}
 .navigation-logo-link {
     display: flex;
     align-items: center;
     height: 100%;
+}
+.navigation-logo__fx {
+    position: relative; /* Enable pseudo-element positioning */
+    height: 500%;
+    width: 10em;
+    margin-left: 1em;
+    overflow: hidden;
+    -webkit-mask-image: url('./images/stamp_1200dpi_fx.png'); /* Apply alpha channel as mask */
+    mask-image: url('./images/stamp_1200dpi_fx.png'); /* Support for non-WebKit browsers */
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}
+.navigation-logo__fx::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    height: 100%;
+    width: 10em;
+
+    background: linear-gradient(
+            90deg,
+            rgb(0, 0, 0) 70%,
+            rgb(255, 255, 255) 80%,
+            rgb(255, 255, 255) 100%
+    );
+    mix-blend-mode: luminosity;
+    animation: sheen 4s ease-in-out infinite;
+
+}
+@keyframes sheen {
+    0% {
+        transform: translateX(-100%); /* Start from the left outside the element */
+    }
+    16.67% { /* 1 second of movement (1/6th of 6s) */
+        transform: translateX(100%); /* Move to the right outside the element */
+    }
+    100% {
+        transform: translateX(100%); /* Hold the position for the remaining 5 seconds */
+    }
 }
 
 /*!*main rows*!*/
