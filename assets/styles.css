@@ -102,6 +102,10 @@ p {
     background: white;
     color: black;
 }
+.btn:active {
+    background: #ffd700;
+    color: black;
+}
 
 /* navigation bar*/
 .navigation {
@@ -148,7 +152,7 @@ p {
 }
 .navigation-logo__fx {
     position: absolute; /* Enable pseudo-element positioning */
-    height: 4em;
+    height: 3em;
     width: 6em;
     overflow: hidden;
     -webkit-mask-image: url('./images/stamp_1200dpi_fx.png'); /* Apply alpha channel as mask */
@@ -293,6 +297,40 @@ p {
 }
 .package__button button {
     margin-bottom: auto;
+}
+
+/* Email List Styles */
+.contact-list {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+    margin-top: 1rem; /* Reduce the space between the heading and the list */
+    margin-bottom: 2rem; /* Add some space after the list */
+}
+.contact-list li {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    background-color: rgba(255, 215, 0, 1); /* Light red background */
+    padding: 0.5rem;
+    border-radius: 2em;
+    color: #fff;
+
+    /*width: min-content ; !* Adjust the width to fit the content *!*/
+    margin-left: auto; /* Center it horizontally */
+    margin-right: auto; /* Center it horizontally */
+    width: 35ch;
+}
+.contact-list li a {
+    text-decoration: none;
+    color: black;
+    transition: color 0.3s ease;
+}
+.contact-list li a:hover {
+    color: #ffffff; /* Change color on hover */
+}
+.contact-list li a:active {
+    background: #ffd700;
+    color: black;
 }
 
 /*resize*/
