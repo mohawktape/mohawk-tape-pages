@@ -2,7 +2,7 @@
     width: 100%;
     display: flex;
     transform-origin: top;
-    height: 50vh
+    height: 100vh
 }
 .slogan h1 {
     font-size: clamp(3rem, 4vw, 5rem);
