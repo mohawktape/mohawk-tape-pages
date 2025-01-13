@@ -334,7 +334,7 @@ p {
 }
 
 /*resize*/
-@media (max-width: 768px) { /* Target iPhone and similar devices */
+@media (max-width: 968px) { /* Target iPhone and similar devices  was 768*/
     .background{
         width: 750px;
         height: 1334px;
@@ -354,7 +354,7 @@ p {
         margin: 1em;
     }
 }
-@media (min-width: 769px) {/* Target desktop and similar devices */
+@media (min-width: 969px) {/* Target desktop and similar devices was 769*/
     .flex-container__hide-on-large {
         display: none;
     }
