@@ -353,16 +353,23 @@ p {
     .package__button{
         margin: 1em;
     }
-    #device-mode::after {
-        content: "Mobile";
+    footer .test-text::after {
+        content: "&copy; 2025 Mohawk Tape Ltd | NZBN 9429052537066 | All Rights Reserved | v1.0.15 | mobile";
+        color: white; /* Optional: to make it more visible */
+    }
+    footer .test-text::before {
+        content: "";
     }
 }
 @media (min-width: 768px) {/* Target desktop and similar devices */
     .flex-container__hide-on-large {
         display: none;
     }
-    /*.footer{<p style="font-size: 0.8em">&copy; 2025 Mohawk Tape Ltd| NZBN 9429052537066 | All Rights Reserved | v1.0.12 "desktop"</p>}*/
-    #device-mode::after {
-        content: "Desktop";
+    footer .test-text::after {
+        content: "&copy; 2025 Mohawk Tape Ltd | NZBN 9429052537066 | All Rights Reserved | v1.0.12 | desktop";
+        color: white; /* Optional: to make it more visible */
     }
-}
+    footer .test-text::before {
+        content: "";
+    }
+}/*}*/
