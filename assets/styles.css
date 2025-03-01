@@ -9,7 +9,7 @@
     height: 1080px;
     background: url('./images/background-1920x1080.png') no-repeat center top;
     background-size: contain;
-    filter: brightness(100%);
+    filter: brightness(30%);
     z-index: -2;
 }
 .background-mask{
@@ -332,6 +332,18 @@ p {
     background: #ffd700;
     color: black;
 }
+
+
+/*ecwid shop style*/
+.ecsp {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.ecsp {
+    align-self: flex-start;
+}
+
 
 /*resize*/
 @media (max-width: 768px) { /* Target iPhone and similar devices  was 768*/
