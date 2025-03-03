@@ -335,6 +335,13 @@ p {
 
 
 /*ecwid shop style*/
+
+.shopGallery {
+    width: 100%;
+    display: flex;
+    transform-origin: top;
+    background: black;
+}
 .ecsp {
     margin-top: 0 !important;
     padding-top: 0 !important;
