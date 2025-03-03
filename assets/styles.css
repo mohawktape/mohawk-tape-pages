@@ -362,7 +362,24 @@ p {
 
 .ecsp {
     align-self: flex-start;
+    
 }
+/* Target Ecwid add-to-cart button */
+.ecsp-SingleProduct-v2 .ecwid-btn--addToBag {
+    background-color: gold !important;
+    border-color: gold !important;
+    color: black !important;
+}
+
+/* Ensure hover state is also yellow */
+.ecsp-SingleProduct-v2 .ecwid-btn--addToBag:hover {
+    background-color: gold !important;
+    border-color: gold !important;
+    color: white !important;
+}
+
+
+
 
 
 /*resize*/
@@ -386,7 +403,7 @@ p {
         margin: 1em;
     }
     footer .test-text::after {
-        content: "\00A9 2025 Mohawk Tape Ltd | NZBN 9429052537066 | All Rights Reserved | v1.0.19-mobile";
+        content: "\00A9 2025 Mohawk Tape Ltd | NZBN 9429052537066 | All Rights Reserved | v1.0.20-mobile";
         color: white; /* Optional: to make it more visible */
     }
     footer .test-text::before {
@@ -398,7 +415,7 @@ p {
         display: none;
     }
     footer .test-text::after {
-        content: "\00A9 2025 Mohawk Tape Ltd | NZBN 9429052537066 | All Rights Reserved | v1.0.19-desktop";
+        content: "\00A9 2025 Mohawk Tape Ltd | NZBN 9429052537066 | All Rights Reserved | v1.0.20-desktop";
         color: white; /* Optional: to make it more visible */
     }
     footer .test-text::before {
