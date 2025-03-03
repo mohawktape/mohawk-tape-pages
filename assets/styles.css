@@ -373,7 +373,7 @@ p {
         margin: 1em;
     }
     footer .test-text::after {
-        content: "\00A9 2025 Mohawk Tape Ltd | NZBN 9429052537066 | All Rights Reserved | v1.0.16-mobile";
+        content: "\00A9 2025 Mohawk Tape Ltd | NZBN 9429052537066 | All Rights Reserved | v1.0.17-mobile";
         color: white; /* Optional: to make it more visible */
     }
     footer .test-text::before {
@@ -385,7 +385,7 @@ p {
         display: none;
     }
     footer .test-text::after {
-        content: "\00A9 2025 Mohawk Tape Ltd | NZBN 9429052537066 | All Rights Reserved | v1.0.16-desktop";
+        content: "\00A9 2025 Mohawk Tape Ltd | NZBN 9429052537066 | All Rights Reserved | v1.0.17-desktop";
         color: white; /* Optional: to make it more visible */
     }
     footer .test-text::before {
