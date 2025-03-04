@@ -353,11 +353,12 @@ p {
     width: 100%;
     display: flex;
     transform-origin: top;
-    background: black;
+    margin-top:  1em;
+    /*background: black;*/
 }
 .ecsp {
     margin-top: 0 !important;
-    padding-top: 0 !important;
+    padding-top: 2em !important;
 }
 
 .ecsp {
@@ -369,6 +370,7 @@ p {
     background-color: gold !important;
     border-color: gold !important;
     color: black !important;
+    content: "Add to Cart"; /* Change the text here */
 }
 
 /* Ensure hover state is also yellow */
@@ -376,11 +378,8 @@ p {
     background-color: gold !important;
     border-color: gold !important;
     color: white !important;
+    content: "Add to Cart"; /* Change the text here */
 }
-
-
-
-
 
 /*resize*/
 @media (max-width: 768px) { /* Target iPhone and similar devices  was 768*/
@@ -403,7 +402,7 @@ p {
         margin: 1em;
     }
     footer .test-text::after {
-        content: "\00A9 2025 Mohawk Tape Ltd | NZBN 9429052537066 | All Rights Reserved | v1.0.20-mobile";
+        content: "\00A9 2025 Mohawk Tape Ltd | NZBN 9429052537066 | All Rights Reserved | v1.0.21-mobile";
         color: white; /* Optional: to make it more visible */
     }
     footer .test-text::before {
@@ -415,7 +414,7 @@ p {
         display: none;
     }
     footer .test-text::after {
-        content: "\00A9 2025 Mohawk Tape Ltd | NZBN 9429052537066 | All Rights Reserved | v1.0.20-desktop";
+        content: "\00A9 2025 Mohawk Tape Ltd | NZBN 9429052537066 | All Rights Reserved | v1.0.21-desktop";
         color: white; /* Optional: to make it more visible */
     }
     footer .test-text::before {

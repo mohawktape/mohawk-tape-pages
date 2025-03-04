@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MohawkTape-Products</title>
+    <title>MohawkTape-Shop</title>
     <link rel="stylesheet" href="assets/styles.css">
 </head>
 <body>
 <div class="flex-column align-center height-100vh">
     <div class="background background-mask"></div>
-    <div class="background "></div>
+    <div class="background"></div>
     <!--    colum A-->
     <div class="flex-container " style="max-height: 50px; margin-bottom: 1em; margin-top: 1.5em; margin-left: 1em" >
         <div class="flex-row flex-1 navigation">
@@ -30,15 +30,13 @@
     <div class="flex-container body-wide__container">
         <!--        row A -->
         <div class="flex-row flex-1 flex-container__hide-on-small">
-            <div class="slogan">
-                <h1>Give your game the Mohawk edge</h1>
-            </div>
+            <div class="flex-column flex-1 align-center shopGallery">
+                <div class="ecsp ecsp-SingleProduct-v2 ecsp-SingleProduct-v2-bordered ecsp-SingleProduct-v2-centered ecsp-Product ec-Product-730697908" itemscope itemtype="http://schema.org/Product" data-single-product-id="730697908"><div itemprop="image"></div><div class="ecsp-title" itemprop="name" content="Mohawk Starter Pack (White)"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecsp-productBrowser-price ecsp-price" itemprop="price" content="25" data-spw-price-location="button"><div itemprop="priceCurrency" content="NZD"></div></div></div><div customprop="options"></div><div customprop="qty"></div><div customprop="addtobag"></div><div customprop="vatinprice"></div></div><script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?113383261&data_platform=singleproduct_v2" charset="utf-8"></script><script type="text/javascript">xProduct()</script>            </div>
         </div>
         <!--        row B -->
         <div class="flex-row flex-1 ">
             <div class="flex-column flex-1 align-center shopGallery">
-                <div class="ecsp ecsp-SingleProduct-v2 ecsp-SingleProduct-v2-bordered ecsp-SingleProduct-v2-centered ecsp-Product ec-Product-730697908" itemtype="http://schema.org/Product" data-single-product-id="730697908"><div itemprop="image"></div><div class="ecsp-title" itemprop="name" style="display:none;" content="Mohawk Starter Pack"></div><div customprop="options"></div><div customprop="qty"></div><div customprop="addtobag"></div></div><script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?113383261&data_platform=singleproduct_v2" charset="utf-8"></script><script type="text/javascript">xProduct()</script>
-            </div>
+                <div class="ecsp ecsp-SingleProduct-v2 ecsp-SingleProduct-v2-bordered ecsp-SingleProduct-v2-centered ecsp-Product ec-Product-731559034" itemscope itemtype="http://schema.org/Product" data-single-product-id="731559034"><div itemprop="image"></div><div class="ecsp-title" itemprop="name" content="Mohawk Starter Pack (Black)"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecsp-productBrowser-price ecsp-price" itemprop="price" content="25" data-spw-price-location="button"><div itemprop="priceCurrency" content="NZD"></div></div></div><div customprop="options"></div><div customprop="qty"></div><div customprop="addtobag"></div><div customprop="vatinprice"></div></div><script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?113383261&data_platform=singleproduct_v2" charset="utf-8"></script><script type="text/javascript">xProduct()</script>            </div>
         </div>
         <!--        row C-->
         <div class="flex-row flex-1 flex-container__hide-on-small">
@@ -77,6 +75,8 @@
     <div class="flex-container body-narrow__container ">
         <div class="flex-row flex-container__hide-on-large ">
             <div class="flex-row flex-1 package ">
+                <div class="flex-column flex-1 align-center shopGallery">
+                    <div class="ecsp ecsp-SingleProduct-v2 ecsp-SingleProduct-v2-bordered ecsp-SingleProduct-v2-centered ecsp-Product ec-Product-731559034" itemscope itemtype="http://schema.org/Product" data-single-product-id="731559034"><div itemprop="image"></div><div class="ecsp-title" itemprop="name" content="Mohawk Starter Pack (Black)"></div><div itemtype="http://schema.org/Offer" itemscope itemprop="offers"><div class="ecsp-productBrowser-price ecsp-price" itemprop="price" content="25" data-spw-price-location="button"><div itemprop="priceCurrency" content="NZD"></div></div></div><div customprop="options"></div><div customprop="qty"></div><div customprop="addtobag"></div><div customprop="vatinprice"></div></div><script data-cfasync="false" type="text/javascript" src="https://app.ecwid.com/script.js?113383261&data_platform=singleproduct_v2" charset="utf-8"></script><script type="text/javascript">xProduct()</script> </div>
                 <div class="package__overview">
                     <h2>Mohawk Starter Pack</h2>
                     <p>Take control of your game
@@ -108,16 +108,28 @@
         <div class="test-text"  style="font-size: 0.8em; margin-top: 2em" ></div>
     </footer>
 </div>
-<script>
-    function changeImage(image) {
-        const mainImage = document.getElementById('mainImage');
-        mainImage.src = image;
 
-    }
-    function buyNow() {
-        window.location.href = 'https://mohawktape.myshopify.com/products/mohawktape-adjustable-system';
-    }
+<!-- Add JavaScript to change button text -->
+<script>
+    // document.addEventListener('DOMContentLoaded', function() {
+    //     // Create a MutationObserver to watch for changes to the DOM
+    //     const observer = new MutationObserver(function(mutationsList, observer) {
+    //         // Find all buttons with the class 'ecwid-btn--addToBag'
+    //         const buttons = document.querySelectorAll('.ecwid-btn--addToBag');
+    //
+    //         if (buttons.length > 0) {
+    //             buttons.forEach(function(button) {
+    //                 button.textContent = 'Add to Cart'; // Change button text
+    //             });
+    //             // Once buttons are found and text is updated, disconnect the observer
+    //             observer.disconnect();
+    //         }
+    //     });
+    //
+    //     // Observe changes in the DOM
+    //     observer.observe(document.body, { childList: true, subtree: true });
+    // });
 </script>
+
 </body>
 </html>
-
