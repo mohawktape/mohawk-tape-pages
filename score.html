@@ -10,13 +10,13 @@
             max-width: 500px;
             margin: auto;
         }
-        label, input, button {
+        label, input, button, select {
             display: block;
             margin: 10px 0;
         }
-        input {
+        input, select {
             padding: 5px;
-            width: 100px;
+            width: 120px;
         }
         #result {
             margin-top: 20px;
@@ -28,13 +28,19 @@
 <h2>Pickleball Score Predictor</h2>
 
 <label>Team A Score:</label>
-<input type="number" id="scoreA" min="0" value="0">
+<input type="number" id="scoreA" min="0" value="8">
 
 <label>Team B Score:</label>
-<input type="number" id="scoreB" min="0" value="0">
+<input type="number" id="scoreB" min="0" value="4">
 
 <label>Time Elapsed (minutes):</label>
 <input type="number" id="minutes" min="1" value="12">
+
+<label>Team Holding Serve:</label>
+<select id="server">
+    <option value="A">Team A</option>
+    <option value="B">Team B</option>
+</select>
 
 <button onclick="predictScore()">Predict Final Score</button>
 
@@ -45,6 +51,7 @@
         let scoreA = parseInt(document.getElementById("scoreA").value);
         let scoreB = parseInt(document.getElementById("scoreB").value);
         let minutes = parseFloat(document.getElementById("minutes").value);
+        let server = document.getElementById("server").value;
 
         let rateA = scoreA / minutes;
         let rateB = scoreB / minutes;
@@ -52,7 +59,7 @@
         let predA = scoreA;
         let predB = scoreB;
 
-        const step = 0.1; // simulate every 6 seconds
+        const step = 0.1;
         let simTime = 0;
 
         while (true) {
@@ -63,27 +70,43 @@
             let intA = Math.floor(predA);
             let intB = Math.floor(predB);
 
+            // Win-by-2 normal check
             if (intA >= 11 && intA - intB >= 2) {
                 displayResult(intA, intB, simTime);
-                break;
+                return;
             }
-
             if (intB >= 11 && intB - intA >= 2) {
                 displayResult(intA, intB, simTime);
-                break;
+                return;
             }
 
-            if (intA >= 21 || intB >= 21) {
-                // Escape infinite loop safety net
-                displayResult("No clear winner", "", simTime);
-                break;
+            // Draw scenario — both reached 11+ and are tied or within 1
+            if ((intA >= 11 || intB >= 11) && Math.abs(intA - intB) < 2 && (intA >= 15 || intB >= 15 || simTime >= 30)) {
+                // Award final winning point to serving team
+                if (server === 'A') intA++;
+                else intB++;
+
+                // Ensure win by 2
+                while (Math.abs(intA - intB) < 2 || (intA < 11 && intB < 11)) {
+                    if (server === 'A') intA++;
+                    else intB++;
+                }
+
+                displayResult(intA, intB, simTime, `(tie resolved by serve advantage to Team ${server})`);
+                return;
+            }
+
+            // Max cap safeguard
+            if (simTime >= 30 || intA >= 25 || intB >= 25) {
+                displayResult(intA, intB, simTime, "Undecided (max time reached)");
+                return;
             }
         }
     }
 
-    function displayResult(a, b, simTime) {
-        document.getElementById("result").innerText =
-            `Predicted Final Score: ${a} - ${b} (estimated finish in ${simTime.toFixed(1)} more minutes)`;
+    function displayResult(a, b, simTime, note = "") {
+        const result = `Predicted Final Score: ${a} - ${b} (estimated finish in ${simTime.toFixed(1)} more minutes)`;
+        document.getElementById("result").innerText = note ? `${result}\n${note}` : result;
     }
 </script>
 </body>
