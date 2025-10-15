@@ -1,5 +1,21 @@
 ﻿
 /* background */
+.allybackground {
+    position: fixed;
+    bottom: 0.0em;
+    left: 50%;
+    transform: translateX(-50%) translatey(0%);
+    width: 1920px;
+    height: 1080px;
+    background: url('./images/ally-background-1920x1080.png') no-repeat center top;
+    background-size: contain;
+    filter: brightness(30%);
+    z-index: -2;
+}
+.allybackground-mask{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0.2) 80%,rgba(255, 0, 0, 0) 90%, rgba(255, 0, 0, 0) 90%);
+    z-index: -1;
+}
 .background {
     position: fixed;
     bottom: 0.0em;
