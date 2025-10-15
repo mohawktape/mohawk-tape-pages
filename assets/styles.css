@@ -13,8 +13,8 @@
     z-index: -2;
 }
 .allybackground-mask{
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 10%, rgba(0, 0, 0, 0.2) 25%,rgba(255, 0, 0, 0) 90%, rgba(255, 0, 0, 0) 90%);
-    z-index: -1;
+    ackground: linear-gradient(to bottom, rgba(0, 0, 0, 1) 70%, rgba(0, 0, 0, 0.2) 80%,rgba(255, 0, 0, 0) 90%, rgba(255, 0, 0, 0) 90%);
+    z-index: -1;*/
 }
 .background {
     position: fixed;
